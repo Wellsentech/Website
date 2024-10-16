@@ -1,45 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellsentech</title>
     <style>
         body { 
             font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #2D5128; 
             margin: 0;
             overflow: hidden;
-            height: 100vh; /* Full viewport height */
-            background-color: #2D5128; 
-            display: flex;
-            flex-direction: column; /* Arrange children vertically */
-            align-items: center; /* Center horizontally */
-            justify-content: flex-start; /* Align children at the top */
         }
         h1 {
-            font-size: 48px; /* Increased font size for the heading */
+            font-size: 100px; /* Increased font size for the heading */
             color: white; /* Set font color to white */
-            margin: 20px 0; /* Centered margin */
+            margin: 20px;
+            position: relative; /* Ensure it appears over the video */
             z-index: 2; /* Ensure it appears over the video */
-        }
-        .links {
-            display: flex;
-            flex-direction: column; /* Arrange links vertically */
-            align-items: center; /* Center links horizontally */
-            flex: 1; /* Take remaining space */
-            justify-content: center; /* Center links vertically */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            display: inline-block; /* Ensure the background fits only the text */
+            padding: 10px 20px; /* Add padding for spacing */
+            border-radius: 10px; /* Optional: Rounded corners */
         }
         a { 
-            margin: 15px; /* Adjusted margin for spacing */
-            padding: 20px 40px; /* Increased padding for height */
+            display: block; 
+            margin: 30px; 
+            padding: 60px; /* Increased padding for height */
             background: rgba(33, 119, 3, 0.7); /* Semi-transparent background */
             color: white; 
             text-decoration: none; 
             width: 750px; /* Increased width */
+            margin: 30px auto; 
             border-radius: 15px; 
-            font-size: 32px; /* Increased font size */
+            font-size: 50px; /* Increased font size */
+            position: relative; /* Ensure it appears over the video */
             z-index: 2; /* Ensure it appears over the video */
-            text-align: center; /* Center text inside the links */
         }
         a:hover { 
             background: rgba(41, 147, 3, 0.8); /* Slightly less transparent on hover */
@@ -52,15 +46,18 @@
             height: 100%;
             z-index: 1; /* Place the video behind other content */
             pointer-events: none; /* Disable interactions with the video */
+            overflow: hidden;
         }
         .video-background iframe {
             width: 100vw;
             height: 56.25vw; /* 16:9 ratio */
             min-height: 100vh;
+            min-width: 100vh;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            pointer-events: none; /* Disable interactions with the video */
         }
     </style>
 </head>
@@ -77,11 +74,9 @@
 
     <!-- Content -->
     <h1>Wellsentech</h1>
-    <div class="links">
-        <a href="https://youtu.be/poDkLFTmOuo">Company Profile</a>
-        <a href="https://youtu.be/AeAbzFbPDBs">Process Flow</a>
-        <a href="https://aeioustudio.net/mockups/WST/">Website</a>
-    </div>
+    <a href="https://youtu.be/poDkLFTmOuo">Company Profile</a>
+    <a href="https://youtu.be/AeAbzFbPDBs">Process Flow</a>
+    <a href="https://aeioustudio.net/mockups/WST/">Website</a>
 </body>
 </html>
 
