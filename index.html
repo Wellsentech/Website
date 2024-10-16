@@ -9,31 +9,41 @@
             background-color: #2D5128; 
             margin: 0;
             overflow: hidden;
+            height: 100vh; /* Make body height 100% of viewport */
         }
         h1 {
             font-size: 100px; /* Increased font size for the heading */
             color: white; /* Set font color to white */
-            margin: 20px;
-            position: relative; /* Ensure it appears over the video */
+            margin: 20px 0; /* Vertical margin only */
+            position: absolute; /* Fixed position for maintaining place */
+            top: 20px; /* Distance from the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust position */
             z-index: 2; /* Ensure it appears over the video */
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            /* Removed the background color for transparency */
             display: inline-block; /* Ensure the background fits only the text */
             padding: 10px 20px; /* Add padding for spacing */
             border-radius: 10px; /* Optional: Rounded corners */
         }
+        .link-container {
+            display: flex; /* Use flexbox for centering links */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: calc(100vh - 100px); /* Adjust height below the heading */
+        }
         a { 
-            display: block; 
-            margin: 30px; 
-            padding: 60px; /* Increased padding for height */
+            margin: 20px; /* Adjust margin for spacing */
+            padding: 20px; /* Adjust padding for height */
             background: rgba(33, 119, 3, 0.7); /* Semi-transparent background */
             color: white; 
             text-decoration: none; 
-            width: 750px; /* Increased width */
-            margin: 30px auto; 
+            width: 750px; /* Fixed width */
             border-radius: 15px; 
             font-size: 50px; /* Increased font size */
             position: relative; /* Ensure it appears over the video */
             z-index: 2; /* Ensure it appears over the video */
+            text-align: center; /* Center text in links */
         }
         a:hover { 
             background: rgba(41, 147, 3, 0.8); /* Slightly less transparent on hover */
@@ -74,10 +84,14 @@
 
     <!-- Content -->
     <h1>Wellsentech</h1>
-    <a href="https://youtu.be/poDkLFTmOuo">Company Profile</a>
-    <a href="https://youtu.be/AeAbzFbPDBs">Process Flow</a>
-    <a href="https://aeioustudio.net/mockups/WST/">Website</a>
+    <div class="link-container">
+        <a href="https://youtu.be/poDkLFTmOuo">Company Profile</a>
+        <a href="https://youtu.be/AeAbzFbPDBs">Process Flow</a>
+        <a href="https://aeioustudio.net/mockups/WST/">Website</a>
+    </div>
 </body>
+</html>
+
 </html>
 
 
