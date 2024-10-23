@@ -20,7 +20,6 @@
             left: 50%; /* Center horizontally */
             transform: translateX(-50%); /* Adjust position */
             z-index: 2; /* Ensure it appears over the video */
-            /* Removed the background color for transparency */
             display: inline-block; /* Ensure the background fits only the text */
             padding: 10px 20px; /* Add padding for spacing */
             border-radius: 10px; /* Optional: Rounded corners */
@@ -48,28 +47,9 @@
         a:hover { 
             background: rgba(41, 147, 3, 0.8); /* Slightly less transparent on hover */
         }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1; /* Place the video behind other content */
-            pointer-events: none; /* Disable interactions with the video */
-            overflow: hidden;
-        }
-        .video-background iframe {
-            width: 100vw;
-            height: 56.25vw; /* 16:9 ratio */
-            min-height: 100vh;
-            min-width: 100vh;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none; /* Disable interactions with the video */
-        }
-
+    </style>
+</head>
+<body>
     <!-- Content -->
     <h1>Wellsentech</h1>
     <div class="link-container">
@@ -78,7 +58,3 @@
     </div>
 </body>
 </html>
-
-</html>
-
-
